@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    print("ip: " + request.remote_addr)
     return render_template("index.html", test="printme")
 
 

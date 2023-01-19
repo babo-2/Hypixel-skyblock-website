@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Farming</title>
+    <script>
+      var lang = "{{lang}}";
+      if (lang === null || lang === "None" || lang === "") {
+        lang = navigator.language || navigator.userLanguage;
+        lang = lang.split("-")[0];
+      }
+
+      var text = "error";
+      if (lang === "de") {
+        text =
+          "Farming is eher eine anfänger money-making-method weil die nicht soviel geld macht, dafür ist es aber sehr einfach.Es könnte sein das bald das outdated sein wird da ein garten updated bald rauskommen wird.Für farming braucht man ersteinmal eine fläche wo man das was man abfarmen wird anbauen kann.Wenn man viel xp bekommen will sollte man eher suger cane oder pumkin farmen für geld ist netherwart am besten aber man bekommt kein farming xp durch netherwart weshalb es meistens besser ist carrot zu farmen weil es viel geld und viel xp gibt.es gibt viele verschiedene bauarten semi-afk wo man nur 2 taste gedrückt halten muss und manchmal die taste welchseln muss.";
+      } else if (lang === "it") {
+        text =
+          "L'agricoltura è più un metodo per fare soldi per principianti perché non fa molti soldi, ma è molto facile.Potrebbe essere che presto sarà obsoleto perché presto uscirà un giardino aggiornato ciò che coltiverai può crescere.Se vuoi ottenere un sacco di xp dovresti piuttosto coltivare canna da zucchero o zucca per soldi è netherwart migliore ma non puoi coltivare xp attraverso netherwart ed è per questo che è per lo più meglio coltivare carote perché è un sacco di soldi e molto xp Esistono molti tipi diversi di semi-afk in cui devi solo tenere premuti 2 pulsanti e talvolta devi cambiare il pulsante.";
+      } else if (lang === "es") {
+        text =
+          "La agricultura es más un método de hacer dinero para principiantes porque no genera tanto dinero, pero es muy fácil. Podría ser que esto pronto quede obsoleto porque pronto saldrá un jardín actualizado, lo que cultivará puede crecer. Si quieres obtener una gran cantidad de xp, deberías cultivar caña de azúcar o calabaza por dinero, es lo mejor, pero no obtienes xp de cultivo a través de netherwart, por lo que es mejor cultivar zanahorias porque es mucho dinero y mucho xp existe Hay muchos tipos diferentes de semi-afk en los que solo tiene que mantener presionados 2 botones y, a veces, tiene que cambiar el botón.";
+      } else if (lang == "fr") {
+        text =
+          "L'agriculture est plus une méthode de gain d'argent pour débutant car elle ne rapporte pas beaucoup d'argent, mais c'est très facile. Il se peut que cela soit bientôt obsolète car un jardin mis à jour sortira bientôt ce que vous cultiverez peut pousser. vous voulez obtenir beaucoup d'xp, vous devriez plutôt cultiver de la canne à sucre ou de la citrouille pour de l'argent, mais vous n'obtenez pas d'xp agricole à travers le netherwart, c'est pourquoi il est généralement préférable de cultiver des carottes car c'est beaucoup d'argent et beaucoup d'xp Il existe de nombreux types de semi-afk différents où vous n'avez qu'à maintenir 2 boutons enfoncés et parfois vous devez changer le bouton.";
+      } else {
+        text =
+          "Farming is more of a beginner's money-making method because it doesn't make that much money, but it's very easy. It could be that this will soon be outdated because an updated garden will come out soon what you will farm can grow. If you want to get a lot of xp you should rather farm suger cane or pumkin for money is netherwart best but you don't get farming xp through netherwart which is why it's mostly better to farm carrot because it's a lot of money and a lot xp exists. There are many different types of semi-afk where you only have to hold down 2 buttons and sometimes you have to change the button.\
+";
+      }
+    </script>
+    <style>
+      #background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("{{ url_for('static', filename='Farm.png') }}");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        filter: brightness(50%);
+      }
+      h1 {
+        text-align: center;
+        font-size: 72px;
+        color: #fff;
+        text-shadow: 2px 2px #000;
+      }
+      #description {
+        font-size: 15px;
+        position: absolute;
+        top: 20%;
+        left: 0%;
+      }
+      #text {
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        left: 3%;
+      }
+      .text {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="background-image"></div>
+    <h1>Farming</h1>
+    <ul id="description" class="text">
+      <li>
+        <p>cost: 4-6m</p>
+      </li>
+      <li>
+        <p>time: 3h</p>
+      </li>
+      <li>
+        <p>
+          money depens on farming crop, elephant pet, farming level, hoe and
+          Century Cake about 3-5m/h
+        </p>
+      </li>
+      <li>
+        <p>
+          xp depens on farming crop, rabbit pet, booster cookie, potions,
+          (equipment, talisman) and hoe.
+        </p>
+      </li>
+    </ul>
+    <p id="text" class="text"></p>
+    <script>
+      document.getElementById("text").innerHTML = text;
+    </script>
+  </body>
+</html>

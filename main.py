@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    print("ip: " + request.remote_addr)
     return render_template("index.html", test="printme")
 
 
@@ -36,7 +35,7 @@ def Skills(method=None):
     if method == None or method == "":
         return render_template("Skills/index.html")
 
-    return render_template("money-making-methods/" + method)
+    return render_template("Skills/" + method + ".html")
 
 
 @app.route("/Skills/")
